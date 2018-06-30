@@ -59,11 +59,17 @@
     src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN7rgOUuhp.woff2) format('woff2');
 }
 
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 800;
+    src: local('Open Sans ExtraBold'), local('OpenSans-ExtraBold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN8rsOUuhp.woff2) format('woff2');
+}
+
 /* ==== CSS Reset ==== */
 * {
     box-sizing: border-box;
 }
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -72,28 +78,28 @@ small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
+table, caption, tbody, tfoot, thead, tr, th, 
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
+article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
-    display: block;
+	display:block;
 }
 
 /* Images */
 img {
-    border-style: none;
+    border-style:none;
 }
 
 /* ==== Body Defaults ==== */
@@ -109,14 +115,8 @@ body {
 
 /* Main frame for pages - should sit just inside body */
 #main {
-    border-width: 1px;
-    border-style: ridge;
-    border-radius: 5px;
-    border-color: black;
-    background-color: white;
     max-width: 65em;
     margin: 5px auto;
-    padding: 5px;
 }
 
 /* Manage floating layout */
@@ -129,6 +129,12 @@ body {
 /* ==== Header including site title and main menu ==== */
 
 header {
+    border-width: 1px;
+    border-style: ridge;
+    border-radius: 0.5em;
+    border-color: black;
+    background-color: white;
+    padding: 0.5em;
     margin-bottom: 0.5em;
 }
 header::after {
@@ -136,11 +142,6 @@ header::after {
     content: "";
     clear: both;
     display: table;
-    /* Border rule */
-    background-image: var(--gradient_hr);
-    height: 2px;
-    width: 100%;
-    margin-top: 1em;
 }
 
 /* siteblock should be a DIV that frames up the sitetitle and sitesubtitle */
@@ -181,7 +182,7 @@ div.siteblock {
 }
 .siteblock a:hover {
     background-color: var(--clr_link_hover_bg);
-    color: inherit;
+    color:inherit;
     text-decoration: inherit;
 }
 .siteblock a:visited {
@@ -222,15 +223,12 @@ div.menu {
 /* ==== Footer ==== */
 footer {
     text-align: center;
-}
-footer::before {
-    /* Border rule */
-    content: "";
-    display: table;
-    background-image: var(--gradient_hr);
-    height: 2px;
-    width: 100%;
-    margin-top: 0.5em;
+    border-width: 1px;
+    border-style: ridge;
+    border-radius: 0.5em;
+    border-color: black;
+    background-color: white;
+    padding: 0.5em;
     margin-bottom: 0.5em;
 }
 footer::after {
@@ -244,8 +242,13 @@ footer::after {
 
 /* Core document/content. Comes after the header and before the footer. */
 article {
-    /* This particular stylesheet doesn't modify anything in the article space. Placeholder only. */
-    /* Other styles may have a background within which the article sits. */
+    border-width: 1px;
+    border-style: ridge;
+    border-radius: 0.5em;
+    border-color: black;
+    background-color: white;
+    padding: 0.5em;
+    margin-bottom: 0.5em;
 }
 
 p {
@@ -253,23 +256,23 @@ p {
 }
 
 ul {
-    list-style: disc;
-    margin-left: 3em;
+    list-style:disc;
+    margin-left:3em;
     margin-bottom: 1em;
 }
 
 ol {
-    list-style: decimal;
-    margin-left: 3em;
+    list-style:decimal;
+    margin-left:3em;
     margin-bottom: 1em;
 }
 
 em, i {
-    font-style: italic;
+	font-style:italic;
 }
 
 strong, b {
-    font-weight: bold;
+    font-weight:bold;
 }
 
 blockquote {
@@ -365,14 +368,16 @@ h6 {
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,
 h1 a:link, h2 a:link, h3 a:link, h4 a:link, h5 a:link, h6 a:link,
-h1 a:visited, h2 a:visited, h3 a:visited, h4 a:visited, h5 a:visited, h6 h:visited {
-    color: inherit;
-    text-decoration: inherit;
+h1 a:visited, h2 a:visited, h3 a:visited, h4 a:visited, h5 a:visited, h6 h:visited
+{
+	color:inherit;
+	text-decoration:inherit;
 }
 
-h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h5 a:hover, h6 a:hover {
-    color: var(--clr_link);
-    text-decoration: underline;
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h5 a:hover, h6 a:hover
+{
+	color: var(--clr_link);
+	text-decoration:underline;
 }
 
 /* horizontal rule */
@@ -385,10 +390,10 @@ hr {
 
 /* code blocks */
 code {
-    font: 0.9em "Lucida Console", Monaco, monospace;
-    color: black;
-    background-color: var(--clr_code_bg);
-    padding: 0 3px 0 3px;
+	font: 0.9em "Lucida Console", Monaco, monospace;
+	color: black;
+	background-color: var(--clr_code_bg);
+	padding: 0 3px 0 3px;
 }
 
 pre {
@@ -404,34 +409,39 @@ pre {
 }
 
 pre code {
-    font: inherit;
-    color: inherit;
-    background-color: inherit;
-    padding: 0;
+	font: inherit;
+	color: inherit;
+	background-color: inherit;
+	padding: 0;
 }
 
 /* Tables */
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-    margin: 0 0 1em 0;
+table
+{
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin: 0 0 1em 0;
 }
 
-table th {
-    font-weight: bold;
+table th
+{
+  font-weight: bold;
 }
 
-table th, table td {
-    border: 1px solid black;
-    padding: 6px 13px;
+table th, table td
+{
+  border: 1px solid black;
+  padding: 6px 13px;
 }
 
 /* Layout Tables (have no borders, padding, or margins) */
-table.layout {
-    margin: 0;
+table.layout
+{
+	margin: 0;
 }
 
-table.layout th, table.layout td {
-    border: 0px none white;
-    padding: 0;
+table.layout th, table.layout td
+{
+	border: 0px none white;
+	padding: 0;	
 }
