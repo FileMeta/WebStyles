@@ -574,6 +574,15 @@ On a post page this appears right before the post header.
     color: #333333; /* TODO: Probably change to black */
 }
 
+/* Customize the social media links */
+.post-comment-link {
+    padding: 0 0.5em;
+}
+
+.post-backlinks {
+    display: none;
+}
+
 /* Customize the previous, next, and home links to look like buttons. */
 .blog-pager-older-link, .blog-pager-newer-link, .home-link {
     display: inline-block;
