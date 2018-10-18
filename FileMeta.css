@@ -117,6 +117,9 @@ body {
 /* Main frame for pages - should sit just inside body */
 #frame {
     max-width: 55em;
+    /* Blogger
+    max-width: 65em;
+    */
     margin: 5px auto;
     padding: 5px;
 }
