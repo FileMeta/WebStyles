@@ -108,7 +108,7 @@ body {
 /* All other font sizes should be relative to the base (e.g. 1.5em or 150%) */
 
 /* Main frame for pages - should sit just inside body */
-#main {
+#frame {
     border-width: 1px;
     border-style: ridge;
     border-radius: 5px;
@@ -240,6 +240,11 @@ footer::after {
     display: table;
 }
 
+/* ==== Main Section - where articles appear */
+main {
+    /* Nothing here - inherits setup from the frame. */
+}
+
 /* ==== General text formatting ==== */
 
 /* Core document/content. Comes after the header and before the footer. */
@@ -290,7 +295,7 @@ a {
 a:hover {
     background-color: var(--clr_link_hover_bg);
 }
-a:visited, a.linkvisited {
+a:visited, .linkvisited {
     color: var(--clr_link_visited);
 }
 
@@ -432,6 +437,6 @@ table.layout {
 }
 
 table.layout th, table.layout td {
-    border: 0px none white;
+    border: 0 none white;
     padding: 0;
 }

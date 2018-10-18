@@ -3,65 +3,68 @@
 
 <!-- This is the minimal set of elements in the <head>. Most sites will need more here. -->
 <head>
-	<title>Page Title Here</title>
-	<link rel="stylesheet" type="text/css" href="FileMeta.css">
+    <title>Page Title Here</title>
+    <link rel="stylesheet" type="text/css" href="FileMeta.css">
     <!-- Todo: Responsive design elements? -->
 </head>
 
 <body>
 
-<!-- The Main element wraps all content within the body. For most styles, its purpose is to
-limit the width of the content when rendered on a very wide browser. It also may be used to
-put a distinct background behind the content different from the browser margins.-->
-<div id="main" >
+    <!-- The Frame element wraps all content within the body. For most styles, its purpose is to
+    limit the width of the content when rendered on a very wide browser. It also may be used to
+    put a distinct background behind the content different from the browser margins.-->
+    <div id="frame">
 
-<!-- The header element wraps the logo and main menu. -->
-<header>
+        <!-- The header element wraps the logo and main menu. -->
+        <header>
 
-	<!-- Within the siteBlock, <h1> is for the title or logo of the site. while <h2> provides
-    a slogan or subtitle. -->
-    <div class="siteblock">
-        <h1>
-            <a href="/">SiteLogo</a>
-        </h1>
-        <h2>
-            <a href="/">Subtitle or slogan.</a>
-        </h2>
-    </div>
+            <!-- Within the siteBlock, <h1> is for the title or logo of the site. while <h2> provides
+            a slogan or subtitle. -->
+            <div class="siteblock">
+                <h1>
+                    <a href="/">SiteLogo</a>
+                </h1>
+                <h2>
+                    <a href="/">Subtitle or slogan.</a>
+                </h2>
+            </div>
 
-	<!-- The main navigation is wrapped in a <div> with class of "menu" the elemnts in the
-    navigation menu are organized as list items <li> in an unordered list <ul> -->	
-	<div class="menu">
-        <ul>
-            <li><a href="http://brandtredd.org">Menu Item 1</a></li>
-            <li><a href="http://brandtredd.org">Menu Item 2</a></li>
-            <li>Menu 3 is not a link.</li>
-        </ul>
-	</div>
+            <!-- The main navigation is wrapped in a <div> with class of "menu" the elemnts in the
+            navigation menu are organized as list items <li> in an unordered list <ul> -->
+            <div class="menu">
+                <ul>
+                    <li><a href="http://brandtredd.org">Menu Item 1</a></li>
+                    <li><a href="http://brandtredd.org">Menu Item 2</a></li>
+                    <li>Menu 3 is not a link.</li>
+                </ul>
+            </div>
 
-</header>
-<!-- End Header
+        </header>
+        <!-- End Header -->
+        <!-- The Main element wraps teh content section of the page. The three major sections are <header> <main> and <footer>
+        all of which are within the .frame -->
+        <main>
 
-<!-- The site content is wrapped in an <article> element. Some pages may repeat the <article>
-element such as in a blog with multiple posts. Some styles may put a border around the <article>
-element while others may put the border around the entire <div class="main"> element. -->
-<article>
-    <div class="title">Document Title</div>
-    <div class="subtitle">Document Subtitle</div>
-    <h1>Heading 1</h1>
-    <p>Lorem ipsum dolor  sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <!-- The site content is wrapped in an <article> element. Some pages may repeat the <article>
+            element such as in a blog with multiple posts. Some styles may put a border around the <article>
+            element while others may put the border around <main> or <frame> . -->
+            <article>
+                <div class="title">Document Title</div>
+                <div class="subtitle">Document Subtitle</div>
+                <h1>Heading 1</h1>
+                <p>Lorem ipsum dolor  sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-</article>
-<!-- End Content -->
-	
-<!-- The footer usually contains copyright and license information. If the site collects
-information it should include a link to a privacy statement. -->	
-<footer>
-<p>This is the footer to the page.</p>
-</footer>
-<!-- End Fooder -->
+            </article>
 
-</div> <!-- end div id="main" -->
+        </main>
+
+        <!-- The footer usually contains copyright and license information. If the site collects
+        information it should include a link to a privacy statement. -->
+        <footer>
+            <p>This is the footer to the page.</p>
+        </footer>
+
+    </div> <!-- end div id="frame" -->
 
 </body>
 </html>
