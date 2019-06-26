@@ -450,3 +450,145 @@ table.layout th, table.layout td
 	border: 0 none white;
 	padding: 0;	
 }
+
+/* ========= Column Layout ========= */
+#frame-columns {
+    max-width: 75em;
+    margin: 0 auto;
+}
+
+#columns {
+    display: block;
+    border: none;
+    margin: auto;
+}
+
+#column1 {
+    display: table-cell;
+    padding-right: 0.5em;
+    min-width: 22em;
+}
+
+#column2 {
+    display: table-cell;
+    width: 18em;
+}
+
+@media only screen and (max-width: 40em) {
+    #column1 {
+        display: block;
+    }
+
+    #column2 {
+        display: block;
+    }
+}
+
+/* ========= Blogger-Specific Styles ========= */
+
+.clear {
+    clear: both;
+}
+
+/* The header before a set of posts on a particular date.
+On the main page this appears before each new date.
+On a post page this appears right before the post header.
+*/
+.date-header {
+    font-size: 1em;
+    font-weight: normal;
+    color: var(--clr_accent2);
+    margin-top: 0.5em;
+    margin-bottom: 0;
+}
+
+.post-outer {
+}
+
+.post-outer::after {
+    /* Draw a gradient line between blog posts */
+    content: "";
+    clear: both;
+    display: table;
+    background-color: black;
+    height: 0.2em;
+    width: 100%;
+    margin-top: 1em;
+}
+
+/* The title of a particular post. Blogger uses h3 but we make the style match h1. */
+.post-title {
+    font-size: 2.0em;
+    font-weight: normal;
+    color: var(--clr_accent1);
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+}
+
+.post-header {
+}
+
+.post-body {
+}
+
+.post-footer {
+}
+
+/* Widget titles are <h2>. The second column where my controls are located is class='sidebar' */
+.sidebar h2 {
+    margin: 1.6em 0 .5em;
+    padding: 4px 5px;
+    background-color: #ffd595; /* TODO: Add to color set */
+    font-size: 100%;
+    font-weight: bold;
+    color: #333333; /* TODO: Probably change to black */
+}
+
+/* Customize the social media links */
+.post-comment-link {
+    padding: 0 0.5em;
+}
+
+.post-backlinks {
+    display: none;
+}
+
+/* Customize the previous, next, and home links to look like buttons. */
+.blog-pager-older-link, .blog-pager-newer-link, .home-link {
+    display: inline-block;
+    padding: 5px;
+    color: white;
+    background-color: var(--clr_accent2);
+    border: 1px solid black;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.blog-pager-older-link:hover, .blog-pager-newer-link:hover, .home-link:hover {
+    color: white;
+    text-decoration: none;
+    background-color: var(--clr_accent2);
+}
+
+.blog-pager-older-link:visited, .blog-pager-newer-link:visited, .home-link:visited {
+    color: white;
+    text-decoration: none;
+    background-color: var(--clr_accent2);
+}
+
+.blog-pager {
+    margin-top: 0.2em;
+    text-align: center;
+}
+
+.blog-pager-newer-link {
+    float: left;
+}
+
+.blog-pager-older-link {
+    float: right;
+}
+
+.blog-feeds {
+    display: none;
+}

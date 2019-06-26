@@ -1,8 +1,5 @@
 ﻿/* ==== Declare Constants ==== */
 :root {
-    --clr_body_bg: #efefef;
-    --clr_header_bg: #336699; /* Header background */
-    --clr_header_accent: #528BC5;
     --clr_accent1: #8A1515; /* Directory, Subtitle, Heading 1 (burgundy) */
     --clr_accent2: #085170; /* Title, Heading 2 (dark turquoise)*/
     --clr_link: #18577e; /* (blue) */
@@ -62,13 +59,6 @@
     src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN7rgOUuhp.woff2) format('woff2');
 }
 
-@font-face {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 800;
-    src: local('Open Sans ExtraBold'), local('OpenSans-ExtraBold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN8rsOUuhp.woff2) format('woff2');
-}
-
 /* ==== CSS Reset ==== */
 * {
     box-sizing: border-box;
@@ -109,19 +99,24 @@ img {
 /* ==== Body Defaults ==== */
 body {
     margin: 0;
-    padding: 0;
     color: black;
     font-family: 'Open Sans', 'Arial', Helvetica, sans-serif;
     font-size: 100%; /* For pages, we allow sensitivity to browser font size settings */
     line-height: 1.4;
-    background-color: var(--clr_body_bg);
+    background: linear-gradient(to right, white, #A0A0A0, white, white, #A0A0A0, white 100%);
 }
 /* All other font sizes should be relative to the base (e.g. 1.5em or 150%) */
 
 /* Main frame for pages - should sit just inside body */
 #frame {
-    max-width: 75em;
-    margin: 0 auto;
+    border-width: 1px;
+    border-style: ridge;
+    border-radius: 5px;
+    border-color: black;
+    background-color: white;
+    max-width: 65em;
+    margin: 5px auto;
+    padding: 5px;
 }
 
 /* Manage floating layout */
@@ -134,47 +129,49 @@ body {
 /* ==== Header including site title and main menu ==== */
 
 header {
-    background-color: var(--clr_header_bg);
-    color: white;
-    border-left: 1.5em solid var(--clr_header_accent);
-    border-right: 1.5em solid var(--clr_header_accent);
+    margin-bottom: 0.5em;
 }
-
 header::after {
     /* Keeps float items from overflowing the block */
     content: "";
     clear: both;
     display: table;
+    /* Border rule */
+    background-image: var(--gradient_hr);
+    height: 2px;
+    width: 100%;
+    margin-top: 1em;
 }
 
 /* siteblock should be a DIV that frames up the sitetitle and sitesubtitle */
 div.siteblock {
     float: left;
-    margin: 1.0em 0.5em;
+    margin-bottom: 0.2em;
 }
 /* Site title or logo */
 .siteblock h1 {
-    font-family: Verdana, Helvetica, Arial, sans-serif;
-    font-size: 1.8em;
-    font-weight: 700;
-    color: white;
-    font-style: normal;
-    font-variant: normal;
-    margin-top: 0;
-    margin-bottom: 0.75em;
-    line-height: 1;
-}
-/* Site subtitle or slogan */
-.siteblock h2 {
-    font-family: Verdana, Helvetica, Arial, sans-serif;
-    font-size: 1em;
-    font-weight: 400;
-    color: white;
+    font-family: Chivo, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 2.6em;
+    letter-spacing: -0.03em;
+    font-weight: 900;
+    color: black;
     font-style: normal;
     font-variant: normal;
     margin-top: 0;
     margin-bottom: 0;
     line-height: 1;
+}
+/* Site subtitle or slogan */
+.siteblock h2 {
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    font-size: 1.4em;
+    font-weight: 400;
+    color: black;
+    font-style: normal;
+    font-variant: normal;
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1.2;
 }
 
 /* Manage Links in the siteblock */
@@ -182,16 +179,13 @@ div.siteblock {
     color: inherit;
     text-decoration: inherit;
 }
-
 .siteblock a:hover {
     background-color: var(--clr_link_hover_bg);
     color: inherit;
     text-decoration: inherit;
 }
-
 .siteblock a:visited {
     color: inherit;
-    text-decoration: inherit;
 }
 
 /* ==== Main Menu ==== */
@@ -200,42 +194,43 @@ div.siteblock {
 div.menu {
     float: right;
     font-size: 1.2em;
-    margin: 0.5em;
+    margin-bottom: 0.2em;
 }
-
 .menu ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
-
 .menu li {
-    color: white;
+    color: var(--clr_accent1);
 }
-
 .menu li a {
     color: inherit;
     text-decoration: inherit;
 }
-
 .menu li a:hover {
     background-color: var(--clr_link_hover_bg);
     color: inherit;
     text-decoration: inherit;
 }
-
 .menu li a:visited {
     color: inherit;
-    text-decoration: inherit;
 }
 
 /* ==== Footer ==== */
 footer {
-    margin:0;
-    padding: 0.5em;
-    background-color: white;
+    text-align: center;
 }
-
+footer::before {
+    /* Border rule */
+    content: "";
+    display: table;
+    background-image: var(--gradient_hr);
+    height: 2px;
+    width: 100%;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
 footer::after {
     /* Keep float items from overflowing the block */
     content: "";
@@ -243,10 +238,9 @@ footer::after {
     display: table;
 }
 
-/* ==== Main Section - where articles appear ==== */
+/* ==== Main Section - where articles appear */
 main {
-    background-color: white;
-    padding: 0 0.5em;
+    /* Nothing here - inherits setup from the frame. */
 }
 
 /* ==== General text formatting ==== */
@@ -296,11 +290,9 @@ a {
     text-decoration: underline;
     color: var(--clr_link);
 }
-
 a:hover {
     background-color: var(--clr_link_hover_bg);
 }
-
 a:visited, .linkvisited {
     color: var(--clr_link_visited);
 }
@@ -311,8 +303,8 @@ a:visited, .linkvisited {
     font-size: 1.6em;
     font-weight: bold;
     color: var(--clr_accent2);
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
     line-height: 1;
 }
 
@@ -321,7 +313,8 @@ a:visited, .linkvisited {
     font-weight: bold;
     font-size: 1.2em;
     color: var(--clr_accent1);
-    padding-bottom: 0.5em;
+    margin-top: 0;
+    margin-bottom: 0.5em;
     line-height: 1;
 }
 
@@ -377,7 +370,6 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,
 h1 a:link, h2 a:link, h3 a:link, h4 a:link, h5 a:link, h6 a:link,
 h1 a:visited, h2 a:visited, h3 a:visited, h4 a:visited, h5 a:visited, h6 h:visited {
     color: inherit;
-    text-decoration: inherit;
 }
 
 h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h5 a:hover, h6 a:hover {
@@ -442,14 +434,20 @@ table.layout {
 }
 
 table.layout th, table.layout td {
-    border: 0px none white;
+    border: 0 none white;
     padding: 0;
 }
 
 /* ========= Column Layout ========= */
 #frame-columns {
+    border-width: 1px;
+    border-style: ridge;
+    border-radius: 5px;
+    border-color: black;
+    background-color: white;
     max-width: 75em;
-    margin: 0 auto;
+    margin: 5px auto;
+    padding: 5px;
 }
 
 #columns {
