@@ -527,7 +527,18 @@ On a post page this appears right before the post header.
     background-color: var(--clr_accent2);
 }
 
+/* Hide the blog feeds */
 .blog-feeds {
     display: none;
 }
 
+/* Clean up the follow-by-email widget */
+.follow-by-email-inner table {
+    margin: 0;
+}
+
+.follow-by-email-inner td {
+    border: 0 none white;
+    padding: 0;
+}
+    
