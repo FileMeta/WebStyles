@@ -1,0 +1,5 @@
+Best practice, as of 2019, is to generate the icon in 32x32 and 16x16 dimensions, use transparency in the background, and combine both versions into one .ico file.
+
+Tools to use:
+Gimp - follow these instructions/
+http://thenewcode.com/467/Creating-Multi-Resolution-Favicons-For-Web-Pages-With-GIMP
