@@ -196,35 +196,35 @@ div.siteblock {
 
 /* ==== Main Menu ==== */
 
-/* menu should be a div that frames up the main menu */
-div.menu {
+/* nav frames up the main menu */
+nav {
     float: right;
     font-size: 1.2em;
     margin: 0.5em;
 }
 
-.menu ul {
+nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-.menu li {
+nav li {
     color: white;
 }
 
-.menu li a {
+nav li a {
     color: inherit;
     text-decoration: inherit;
 }
 
-.menu li a:hover {
+nav li a:hover {
     background-color: var(--clr_link_hover_bg);
     color: inherit;
     text-decoration: inherit;
 }
 
-.menu li a:visited {
+nav li a:visited {
     color: inherit;
     text-decoration: inherit;
 }

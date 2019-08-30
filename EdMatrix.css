@@ -126,7 +126,7 @@ body {
     display: table;
 }
 
-/* ==== Header including site title and main menu ==== */
+/* ==== Header including site title and nav menu ==== */
 
 header {
     margin-bottom: 0.5em;
@@ -190,30 +190,30 @@ div.siteblock {
 
 /* ==== Main Menu ==== */
 
-/* menu should be a div that frames up the main menu */
-div.menu {
+/* nav frames up the main menu which is typically a list of links */
+nav {
     float: right;
     font-size: 1.2em;
     margin-bottom: 0.2em;
 }
-.menu ul {
+nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
-.menu li {
+nav li {
     color: var(--clr_accent1);
 }
-.menu li a {
+nav li a {
     color: inherit;
     text-decoration: inherit;
 }
-.menu li a:hover {
+nav li a:hover {
     background-color: var(--clr_link_hover_bg);
     color: inherit;
     text-decoration: inherit;
 }
-.menu li a:visited {
+nav li a:visited {
     color: inherit;
 }
 
@@ -435,153 +435,10 @@ table.layout {
 
 table.layout th, table.layout td {
     border: 0 none white;
-    padding: 0;
+    padding: 0 0.25em;
 }
 
-/* ========= Column Layout ========= */
-#frame-columns {
-    border-width: 1px;
-    border-style: ridge;
-    border-radius: 5px;
-    border-color: black;
-    background-color: white;
-    max-width: 75em;
-    margin: 5px auto;
-    padding: 5px;
-}
-
-#columns {
-    display: block;
-    border: none;
-    margin: auto;
-}
-
-#column1 {
-    display: table-cell;
-    padding-right: 0.5em;
-    min-width: 22em;
-}
-
-#column2 {
-    display: table-cell;
-    width: 18em;
-}
-
-@media only screen and (max-width: 40em) {
-    #column1 {
-        display: block;
-    }
-
-    #column2 {
-        display: block;
-    }
-}
-
-/* ========= Blogger-Specific Styles ========= */
-
-.clear {
-    clear: both;
-}
-
-/* The header before a set of posts on a particular date.
-On the main page this appears before each new date.
-On a post page this appears right before the post header.
-*/
-.date-header {
-    font-size: 1em;
-    font-weight: normal;
-    color: var(--clr_accent2);
-    margin-top: 0.5em;
-    margin-bottom: 0;
-}
-
-.post-outer {
-}
-
-.post-outer::after {
-    /* Draw a gradient line between blog posts */
-    content: "";
-    clear: both;
-    display: table;
-    background-color: black;
-    height: 0.2em;
-    width: 100%;
-    margin-top: 1em;
-}
-
-/* The title of a particular post. Blogger uses h3 but we make the style match h1. */
-.post-title {
-    font-size: 2.0em;
-    font-weight: normal;
-    color: var(--clr_accent1);
-    margin-top: 0.2em;
-    margin-bottom: 0.2em;
-}
-
-.post-header {
-}
-
-.post-body {
-}
-
-.post-footer {
-}
-
-/* Widget titles are <h2>. The second column where my controls are located is class='sidebar' */
-.sidebar h2 {
-    margin: 1.6em 0 .5em;
-    padding: 4px 5px;
-    background-color: #ffd595; /* TODO: Add to color set */
-    font-size: 100%;
-    font-weight: bold;
-    color: #333333; /* TODO: Probably change to black */
-}
-
-/* Customize the social media links */
-.post-comment-link {
-    padding: 0 0.5em;
-}
-
-.post-backlinks {
-    display: none;
-}
-
-/* Customize the previous, next, and home links to look like buttons. */
-.blog-pager-older-link, .blog-pager-newer-link, .home-link {
-    display: inline-block;
-    padding: 5px;
-    color: white;
-    background-color: var(--clr_accent2);
-    border: 1px solid black;
-    border-radius: 5px;
-    text-decoration: none;
-}
-
-.blog-pager-older-link:hover, .blog-pager-newer-link:hover, .home-link:hover {
-    color: white;
-    text-decoration: none;
-    background-color: var(--clr_accent2);
-}
-
-.blog-pager-older-link:visited, .blog-pager-newer-link:visited, .home-link:visited {
-    color: white;
-    text-decoration: none;
-    background-color: var(--clr_accent2);
-}
-
-.blog-pager {
-    margin-top: 0.2em;
-    text-align: center;
-}
-
-.blog-pager-newer-link {
-    float: left;
-}
-
-.blog-pager-older-link {
-    float: right;
-}
-
-.blog-feeds {
-    display: none;
+/* Streamlining is sometimes used in tables. */
+.streamline p {
+	display: inline;
 }
