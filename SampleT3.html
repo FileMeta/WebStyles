@@ -2,70 +2,23 @@
 <html>
 
 <head>
-	<title>WebStyles Sample</title>
-	<meta charset="utf-8">
-	<link id="pagestyle" rel="stylesheet" type="text/css" href="FileMeta.css">
-    
-    <!-- This script is NOT part of the sample. It supports switching sample stylesheets. -->
-    <script>
-
-// The stylesheets that can be selectively applied to this sample. Add yours here.
-var stylesheets = ["FileMeta.css", "Block.css", "EdMatrix.css", "BrandtRedd.css", "OfThat.css", "BrowserDefault.css", "ThatWhichUnitesUs.css", "WorkInProgress.css"];
-
-function setStyleSheet(sheet) {
-    document.getElementById("pagestyle").setAttribute("href", sheet);
-}
-
-function init() {
-    var cb = document.getElementById("styleselectbar");
-    for (var i = 0; i < stylesheets.length; ++i) {
-        var b = document.createElement("button");
-        b.setAttribute("onclick", "setStyleSheet(\"" + stylesheets[i] + "\");");
-        b.innerHTML = stylesheets[i];
-        cb.appendChild(document.createTextNode(" "));
-        cb.appendChild(b);
-    }
-}
-
-window.onload = init;
-
-    </script>
-
-    <!-- These styles are exclusively for the stylesheet selection bar and not part of the sample content. -->
-    <style>
-
-.styleselectbar {
-    color: black;
-    background-color: skyblue;
-    padding: 0 11pt;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 11pt;
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 20pt;
-}
-
-.styleselectbar button {
-    color: black;
-    background-color: white;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 11pt;
-    border: thin solid green;
-    border-radius: 4px;
-}
-
-    </style>
+    <title>T3 Innovation Network - Network of Competency Registries</title>
+    <meta charset="utf-8">
+	<link href="https://www.uschamberfoundation.org/sites/default/files/favicon.ico" rel="icon" type="image/vnd.microsoft.icon" />
+    <link id="pagestyle" rel="stylesheet" type="text/css" href="WorkInProgress.css" />
 </head>
 
 <body>
 
-<!-- Not part of the sample. This control bar allows swapping styles. -->
-<div id="styleselectbar" class="styleselectbar">Select StyleSheet:</div>
-<div style="height: 20pt">&nbsp;</div>
-
 <div id="frame">
+
+	<div class="chamber-header-frame">
+		<div class="chamber-header">
+			<a href="https://www.uschamberfoundation.org">
+				<img src="USChamberFoundation-Logo.svg" alt="U.S. Chamber of Commerce Foundation Logo" width="320"/>
+			</a>
+		</div>	
+	</div>
 
 	<div class="header-frame">
 		<header>
@@ -73,21 +26,12 @@ window.onload = init;
 			<!-- logo -->
 			<div class="siteblock">
 				<h1>
-					<a href="/">SiteLogo</a>
+					<a href="https://www.uschamberfoundation.org/t3-innovation"><img src="Chamber_T3_Logo_Black-01.png" alt="T3 Innovation Network Logo"/></a>
 				</h1>
 				<h2>
-					<a href="/">Subtitle or slogan.</a>
+					<a href="/">Pilot Project 5.2: Network of Competency Registries</a>
 				</h2>
 			</div>
-
-			<!-- main navigation -->
-			<nav>
-				<ul>
-					<li><a href="http://brandtredd.org">Menu Item 1</a></li>
-					<li><a href="http://brandtredd.org">Menu Item 2</a></li>
-					<li>Menu 3 is not a link.</li>
-				</ul>
-			</nav>
 		</header>
 	</div> <!-- header-frame -->
 
@@ -185,7 +129,7 @@ window.onload = init;
 
 	<div class="footer-frame">
 		<footer>
-			<p>This is the footer to the page.</p>
+			© The U.S. Chamber of Commerce Foundation All Rights Reserved.
 		</footer>
 	</div> <!-- footer-frame -->
 
