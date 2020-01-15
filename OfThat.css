@@ -264,13 +264,17 @@ p {
 ul {
     list-style: disc;
     margin-left: 3em;
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
 }
 
 ol {
     list-style: decimal;
     margin-left: 3em;
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
+}
+
+ul li, ol li {
+	margin-bottom: 0.5em;
 }
 
 em, i {
